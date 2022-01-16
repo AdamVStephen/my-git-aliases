@@ -1,0 +1,5 @@
+# 2022-01-16 Ref https://stackoverflow.com/questions/543346/list-all-the-files-that-ever-existed-in-a-git-repository/543383#543383
+#if one file ever had into repository
+ff "!git log --pretty=format: --name-status --all -M -B | sort -u | grep $1"
+# The same as above but showing copied files
+ffc "!git log --pretty=format: --name-status --all -C -M -B | sort -u | grep $1"
